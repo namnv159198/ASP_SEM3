@@ -1,0 +1,42 @@
+﻿@model ASP_SEM3.Models.LopHoc
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LopHoc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinh_Thuc_Nop_Phat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hinh_Thuc_Nop_Phat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NopPhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NopPhat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayNop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayNop)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MSV }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

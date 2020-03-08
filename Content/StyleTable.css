@@ -1,0 +1,54 @@
+﻿#Table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#Table td, #Table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#Table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#Table tr:hover {
+    background-color: #ddd;
+}
+
+#Table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.buttonForm {
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonForm a:link {
+    color: white;
+}
+
+#EditButton {
+    background-color: #4CAF50;
+}
+
+#DeleteButton {
+    background-color: #ff0000;
+}
+
+#DetailButton {
+    background-color: #008CBA;
+}

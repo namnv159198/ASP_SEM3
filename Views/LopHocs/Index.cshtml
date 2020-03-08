@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ASP_SEM3.Models.LopHoc>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="~/Content/StyleTable.css"/>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table id="Table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Hinh_Thuc_Nop_Phat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NopPhat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayNop)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hinh_Thuc_Nop_Phat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NopPhat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayNop)
+            </td>
+            <td>
+                <p id="EditButton" class="buttonForm">@Html.ActionLink("Edit", "Edit", new { id = item.MSV })</p> |
+                <p id="DetailButton" class="buttonForm">@Html.ActionLink("Details", "Details", new { id = item.MSV }) </p>|
+                <p id="DeleteButton" class="buttonForm">@Html.ActionLink("Delete", "Delete", new { id = item.MSV })</p>
+            </td>
+        </tr>
+    }
+
+</table>
+<h2>Total</h2>
+<h2>Tổng số tiền nộp phạt : @TempData["TongTien"]</h2>
+<H2>Tổng số chống đẩy : @TempData["TongCD"]</H2>

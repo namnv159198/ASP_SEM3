@@ -1,0 +1,48 @@
+﻿@model ASP_SEM3.Models.LopHoc
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LopHoc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinh_Thuc_Nop_Phat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hinh_Thuc_Nop_Phat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NopPhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NopPhat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayNop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayNop)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
